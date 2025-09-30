@@ -3,7 +3,10 @@
 #include <WiFi.h>
 #include <HTTPClient.h>
 #include <WiFiClientSecure.h>
+//Above are header files//
 
+
+// Below are Variables & constants //
 const char* ssid = "wisdom and wine";
 const char* password = "permissiongr@nted";
 const char* filename = "/one.txt";
@@ -35,6 +38,7 @@ void setup() {
   client.setInsecure();  // skip certificate check
   HTTPClient http;
 
+  //__// Stariting Http code //__//
   if (http.begin(client, url)) {
     int httpCode = http.GET();
     if (httpCode == HTTP_CODE_OK) {
@@ -45,7 +49,7 @@ void setup() {
         return;
       }
 
-      //__ Creating Dynamic Memory Using malloc() __//
+      //__ // Creating Dynamic Memory Using malloc() //__//
       uint8_t *buff = (uint8_t*) malloc(BUFFER_SIZE);
       if (!buff) {
         Serial.println("Buffer allocation failed!");
@@ -55,7 +59,7 @@ void setup() {
       unsigned long start = millis();
       int total = 0;
 
-      //___WRiting to Buffer __//
+      //___// WRiting to Buffer __//
       while (http.connected() && (stream->available() > 0)) {
         int len = stream->read(buff, BUFFER_SIZE);  // non-blocking read
         if (len > 0) {
@@ -94,4 +98,5 @@ void setup() {
 
 // LOOP //
 void loop() {}
+
 
