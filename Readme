@@ -15,6 +15,11 @@ Project Description
   - Implemented SPIFFS(SPI-Flash File system) that creates files for storage of packet data.
   - The project is implemented using ESP32 Plugin for Arduino IDE & SPI-Flash file system.
 
-``` #include SPIFFS.h ```
+Libraries and header files
+    #include SPIFFS.h
+    #include FS.h
+    #include <WiFi.h>
+    #include <WiFiClientSecure>
+    #include <HTTP.h>
 
 
