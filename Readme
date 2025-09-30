@@ -22,7 +22,7 @@ Libraries and header files
     #include <WiFi.h>
     #include <WiFiClientSecure>
     #include <HTTP.h>
-
+NOTE: After everything is set. You can directly select you ESP32 development board for Arduino IDE and select port and Directly flash the code.
 FOOTNOTES: This project contains version-1 and version-2. 
 Version 2 is updated version of version 1 that contains larger buffer for larger payload data for HTTPS GET request.
 
