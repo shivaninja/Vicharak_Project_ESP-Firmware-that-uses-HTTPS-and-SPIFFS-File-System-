@@ -15,7 +15,7 @@ const char* url = "https://raw.githubusercontent.com/mdn/learning-area/main/java
 void setup() {
   Serial.begin(115200);
 
-  // Connect Wi-Fi
+  //__// Connect WiFi//__//
   WiFi.begin(ssid, password);
   Serial.print("Connecting");
   while (WiFi.status() != WL_CONNECTED) {
@@ -24,12 +24,13 @@ void setup() {
   }
   Serial.println("\nConnected!");
 
-  // Mount SPIFFS
+  //___//   Mount SPIFFS   //__//
   if (!SPIFFS.begin(true)) {
     Serial.println("SPIFFS Mount Failed");
     return;
   }
 
+  //___// HTPPS Connectivity //__//
   WiFiClientSecure client;
   client.setInsecure();  // skip certificate check
   HTTPClient http;
@@ -44,6 +45,7 @@ void setup() {
         return;
       }
 
+      //__ Creating Dynamic Memory Using malloc() __//
       uint8_t *buff = (uint8_t*) malloc(BUFFER_SIZE);
       if (!buff) {
         Serial.println("Buffer allocation failed!");
@@ -53,6 +55,7 @@ void setup() {
       unsigned long start = millis();
       int total = 0;
 
+      //___WRiting to Buffer __//
       while (http.connected() && (stream->available() > 0)) {
         int len = stream->read(buff, BUFFER_SIZE);  // non-blocking read
         if (len > 0) {
@@ -62,14 +65,17 @@ void setup() {
       }
 
       file.close();
+
+      //__SPEED__//
       unsigned long duration = millis() - start;
       float speed = (total / 1024.0) / (duration / 1000.0);
       Serial.printf("Downloaded %d bytes in %.2f sec (%.2f KB/s)\n",
                     total, duration / 1000.0, speed);
 
+      //FREEING HEAP//
       free(buff);
 
-      // Optional: Read back
+      //// Optionall: Reading back///////
       File readFile = SPIFFS.open(filename, FILE_READ);
       if (readFile) {
         Serial.println("File content:");
@@ -86,4 +92,6 @@ void setup() {
   }
 }
 
+// LOOP //
 void loop() {}
+
