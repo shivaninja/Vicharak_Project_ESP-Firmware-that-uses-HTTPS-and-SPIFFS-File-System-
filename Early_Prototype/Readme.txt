@@ -1,6 +1,9 @@
 
 This is the version on of the project that contains basic blueprint like structrue for the Final project, which is version-2.
 
+Check my Project Videos:
+    (https://drive.google.com/drive/u/1/folders/1sDHBQAxutHWzhlY8MnNhDF_fwrui1atU)
+    Check above link where I create and explain the whole project.
 
 Includes the below libraries/header files & their functions in the code.
   #include "FS.h"
@@ -9,13 +12,10 @@ Includes the below libraries/header files & their functions in the code.
   #include <HTTPClient.h>
   #include <WiFiClientSecure.h>
 
-
 ///---WiFi FUnction used in the project---///
     WiFi.begin(ssid, password);
     WiFi.status() 
     WiFi.SSID();
-
-  
 
 ///---SPIFFS Functions used in this project---///
     SPIFFS.begin(true)
