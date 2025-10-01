@@ -12,7 +12,7 @@ const char* password = "permissiongr@nted";
 const char* filename = "/one.txt";
 const char* url = "https://raw.githubusercontent.com/mdn/learning-area/main/javascript/introduction-to-js-1/assessment-start/raw-text.txt";
 
-// Larger buffer for higher throughput
+// This time I declared Larger buffer for higher buffer allocation using dynamic memory allocatin
 #define BUFFER_SIZE 16384   // 16 KB (safe for most ESP32 boards)
 
 void setup() {
@@ -20,7 +20,7 @@ void setup() {
 
   //__// Connect WiFi//__//
   WiFi.begin(ssid, password);
-  Serial.print("Connecting");
+   Serial.print("Connecting");
   while (WiFi.status() != WL_CONNECTED) {
     delay(500);
     Serial.print(".");
@@ -29,8 +29,8 @@ void setup() {
 
   //___//   Mount SPIFFS   //__//
   if (!SPIFFS.begin(true)) {
-    Serial.println("SPIFFS Mount Failed");
-    return;
+      Serial.println("SPIFFS Mount Failed");
+  return;
   }
 
   //___// HTPPS Connectivity //__//
@@ -42,7 +42,7 @@ void setup() {
   if (http.begin(client, url)) {
     int httpCode = http.GET();
     if (httpCode == HTTP_CODE_OK) {
-      WiFiClient *stream = http.getStreamPtr();
+       WiFiClient *stream = http.getStreamPtr();
       File file = SPIFFS.open(filename, FILE_WRITE);
       if (!file) {
         Serial.println("File open failed");
@@ -98,5 +98,6 @@ void setup() {
 
 // LOOP //
 void loop() {}
+
 
 
