@@ -28,7 +28,7 @@ void setup() {
   //__SPIFFS_SYSTEM___//
   if (!SPIFFS.begin(true)) {
     Serial.println("SPIFFS Mount Failed");
-    return;
+  return;
   }
 
   WiFiClientSecure client;
@@ -80,4 +80,5 @@ void setup() {
 }
 
 void loop() {}
+
 
