@@ -1,8 +1,9 @@
 
--------------------------------------------------------  PROJECT FOR VICHARAK COMPUTERS ----------------------------------------------------------------------
+---------------------------------------- PROJECT FOR VICHARAK COMPUTERS -----------------------------------------
 
-# PROJECT REQUIREMENT: Develop a firmware application for ESP32 Dev Kit that downloads file via HTTPS from a public URL and writes
-it to SPIFFS(SPI flash file system) at a speed of at least 400KBps.
+# PROJECT REQUIREMENT:
+    Develop a firmware application for ESP32 Dev Kit that downloads file via HTTPS from a public URL and writes
+    it to SPIFFS(SPI flash file system) at a speed of at least 400KBps.
 
 
 #PROJECT DESCRIPTION: FIRMWARE APPLICATION FOR ESP32 DEV-KIT-V1 THAT USES SPIFFS FOR FILE SAVING AND HTTPS FOR FILE DOWNLOAD VIA HTTPS PROTOCOL 
