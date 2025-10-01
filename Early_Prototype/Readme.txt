@@ -10,5 +10,30 @@ Includes the below libraries/header files & their functions in the code.
   #include <WiFiClientSecure.h>
 
 
+///---WiFi FUnction used in the project---///
+    WiFi.begin(ssid, password);
+    WiFi.status() 
+    WiFi.SSID();
+
+  
+
+///---SPIFFS Functions used in this project---///
+    SPIFFS.begin(true)
+    SPIFFS.open(filename, FILE_WRITE);
+    File.readString()
+    File.read();
+    File.close();
+    SPIFFS.remove();
+    file.write();
+
+///---HTTP & HTTPS FUnctions used int this project---///
+    WiFiClientSecure client;
+    client.setInsecure();  // skip certificate check
+    HTTPClient http;
+    http.begin(client, url)) {
+    http.GET();
+    http.getStreamPtr();
+    http.end();
+
 
  
