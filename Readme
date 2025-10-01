@@ -17,7 +17,7 @@ Check my Project Videos:
 
 Prerequrisits: 
     1. ESP32 Plugin for Arduino IDE (This project is implemented in ESP32 Arduino Framework) 
-    2. SPIFFS File system 
+    2. SPIFFS File system (SPI Flash File System)
     3. WiFi library and module
     4. WiFi ClientSecure module and HTTP module for ESP32
     5. Arduino IDE version 1.8.18
@@ -30,6 +30,10 @@ Project Description
     - Implemented “Https Client-secure” module for Web connectivity, Https GET requests
     - Implemented SPIFFS(SPI-Flash File system) that creates files for storage of packet data.
     - The project is implemented using ESP32 Plugin for Arduino IDE & SPI-Flash file system.
+
+PDF:
+    I also wrote PDF for this project that explains the frequency bottlenecks & latency issues in SPIFFS. 
+    It details the performance limits of SPIFFS and how it affects this project.
 
 Libraries and header files
     #include SPIFFS.h
