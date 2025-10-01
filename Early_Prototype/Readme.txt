@@ -5,6 +5,14 @@ Check my Project Videos:
     (https://drive.google.com/drive/u/1/folders/1sDHBQAxutHWzhlY8MnNhDF_fwrui1atU)
     Check above link where I create and explain the whole project.
 
+Project Description
+    Developed a firmware application for ESP32 Dev-Kit-V1 microcontroller using Arduino IDE & Arduino-ESP32 Plugin, 
+    This firmware downloads web file via HTTPS from a public URL and writes it to SPIFFS(SPI flash file system) at a speed of at least 150KBps 
+    - Implemented WiFi connectivity that uses WiFi modules for internet connectivity. 
+    - Implemented “Https Client-secure” module for Web connectivity, Https GET requests
+    - Implemented SPIFFS(SPI-Flash File system) that creates files for storage of packet data.
+    - The project is implemented using ESP32 Plugin for Arduino IDE & SPI-Flash file system.
+
 Includes the below libraries/header files & their functions in the code.
   #include "FS.h"
   #include "SPIFFS.h"
