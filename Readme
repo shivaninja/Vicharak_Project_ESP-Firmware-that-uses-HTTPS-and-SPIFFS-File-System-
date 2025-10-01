@@ -1,4 +1,11 @@
-# FIRMWARE APPLICATION FOR ESP32 DEV-KIT-V1 THAT USES SPIFFS FOR FILE SAVING AND HTTPS FOR FILE DOWNLOAD VIA HTTPS PROTOCOL 
+
+-------------------------------------------------------  PROJECT FOR VICHARAK COMPUTERS ----------------------------------------------------------------------
+
+# PROJECT REQUIREMENT: Develop a firmware application for ESP32 Dev Kit that downloads file via HTTPS from a public URL and writes
+it to SPIFFS(SPI flash file system) at a speed of at least 400KBps.
+
+
+#PROJECT DESCRIPTION: FIRMWARE APPLICATION FOR ESP32 DEV-KIT-V1 THAT USES SPIFFS FOR FILE SAVING AND HTTPS FOR FILE DOWNLOAD VIA HTTPS PROTOCOL 
     NOTE: Version-2 is just the updated and advance version of Version-1 with new programs
 
 Check my Project Videos:
@@ -6,7 +13,7 @@ Check my Project Videos:
     Check above link where I create and explain the whole project.
 
 Prerequrisits: 
-    1. ESP32 Plugin for Arduino IDE 
+    1. ESP32 Plugin for Arduino IDE (This project is implemented in ESP32 Arduino Framework) 
     2. SPIFFS File system 
     3. WiFi library and module
     4. WiFi ClientSecure module and HTTP module for ESP32
