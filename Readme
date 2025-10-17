@@ -12,11 +12,6 @@
     NOTE: Version-2 is just the updated and advance version of Version-1 with new programs
 
 
-Check my Project Video:
-    (https://drive.google.com/drive/u/1/folders/1sDHBQAxutHWzhlY8MnNhDF_fwrui1atU)
-    Check above link where I create and explain the whole project.
-
-
 Prerequrisits: 
     1. ESP32 Plugin for Arduino IDE (This project is implemented in ESP32 Arduino Framework) 
     2. SPIFFS File system (SPI Flash File System)
@@ -79,5 +74,11 @@ Includes the below libraries/header files & their functions in the code.
     http.GET();
     http.getStreamPtr();
     http.end();
+
+
+    Video Link:
+    https://drive.google.com/drive/u/1/folders/1sDHBQAxutHWzhlY8MnNhDF_fwrui1atU
+    
+
 
 
