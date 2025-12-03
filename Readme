@@ -1,5 +1,5 @@
 
-# ---------------------------------------- PROJECT FOR VICHARAK COMPUTERS -----------------------------------------
+# PROJECT FOR VICHARAK COMPUTERS INTERNSHIP
 
 
 
@@ -8,7 +8,7 @@
     it to SPIFFS(SPI flash file system) at a speed of at least 400KBps.
 
 
-#PROJECT DESCRIPTION: FIRMWARE APPLICATION FOR ESP32 DEV-KIT-V1 THAT USES SPIFFS FOR FILE SAVING AND HTTPS FOR FILE DOWNLOAD VIA HTTPS PROTOCOL 
+# PROJECT DESCRIPTION: FIRMWARE APPLICATION FOR ESP32 DEV-KIT-V1 THAT USES SPIFFS FOR FILE SAVING AND HTTPS FOR FILE DOWNLOAD VIA HTTPS PROTOCOL 
     NOTE: Version-2 is just the updated and advance version of Version-1 with new programs
 
 
