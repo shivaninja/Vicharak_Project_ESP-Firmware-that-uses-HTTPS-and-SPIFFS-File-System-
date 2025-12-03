@@ -1,10 +1,6 @@
 
 # PROJECT FOR VICHARAK COMPUTERS INTERNSHIP
 
-# Project1 — Google Home Automation with Voice-Controlled LED 
-
-
-
 # PROJECT REQUIREMENT:
     Develop a firmware application for ESP32 Dev Kit that downloads file via HTTPS from a public URL and writes
     it to SPIFFS(SPI flash file system) at a speed of at least 400KBps.
