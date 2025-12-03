@@ -46,6 +46,7 @@ Early prototype is the version on of the project that contains basic blueprint l
 is same in both, but the program implementation and structrue changes.
 
 Includes the below libraries/header files & their functions in the code.
+```
   #include "FS.h"
   #include "SPIFFS.h"
   #include <WiFi.h>
@@ -75,6 +76,7 @@ Includes the below libraries/header files & their functions in the code.
     http.getStreamPtr();
     http.end();
 
+```
 
     Video Link: ( https://drive.google.com/drive/u/1/folders/1sDHBQAxutHWzhlY8MnNhDF_fwrui1atU )
     
