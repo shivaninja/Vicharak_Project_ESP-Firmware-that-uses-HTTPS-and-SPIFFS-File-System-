@@ -1,82 +1,116 @@
 # PROJECT FOR VICHARAK COMPUTERS INTERNSHIP
+Project1 — Google Home Automation with Voice-Controlled LED
 
-# PROJECT REQUIREMENT:
-    Develop a firmware application for ESP32 Dev Kit that downloads file via HTTPS from a public URL and writes
-    it to SPIFFS(SPI flash file system) at a speed of at least 400KBps.
+# Project Requirement
 
+Develop a firmware application for ESP32 Dev Kit that downloads a file via HTTPS from a public URL and writes it to SPIFFS (SPI Flash File System) at a speed of at least 400 KB/s.
 
-# PROJECT DESCRIPTION: FIRMWARE APPLICATION FOR ESP32 DEV-KIT-V1 THAT USES SPIFFS FOR FILE SAVING AND HTTPS FOR FILE DOWNLOAD VIA HTTPS PROTOCOL 
-    NOTE: Version-2 is just the updated and advance version of Version-1 with new programs
+📌 PROJECT DESCRIPTION
 
+Firmware application for ESP32 Dev-Kit-V1 that downloads files via HTTPS and saves them to SPIFFS.
+Version-2 is an improved version of Version-1 with structural & performance changes.
 
-Prerequrisits: 
-    1. ESP32 Plugin for Arduino IDE (This project is implemented in ESP32 Arduino Framework) 
-    2. SPIFFS File system (SPI Flash File System)
-    3. WiFi library and module
-    4. WiFi ClientSecure module and HTTP module for ESP32
-    5. Arduino IDE version 1.8.18
-    NOTE: SPIFFS file systems is not optimized for newer arduino IDE versions, so it is better to use version 1.8.18
+🧾 Prerequisites
 
-Project Description
-    Developed a firmware application for ESP32 Dev-Kit-V1 microcontroller using Arduino IDE & Arduino-ESP32 Plugin, 
-    This firmware downloads web file via HTTPS from a public URL and writes it to SPIFFS(SPI flash file system) at a speed of at least 150KBps 
-    - Implemented WiFi connectivity that uses WiFi modules for internet connectivity. 
-    - Implemented “Https Client-secure” module for Web connectivity, Https GET requests
-    - Implemented SPIFFS(SPI-Flash File system) that creates files for storage of packet data.
-    - The project is implemented using ESP32 Plugin for Arduino IDE & SPI-Flash file system.
+ESP32 Plugin for Arduino IDE
 
-SPIFFS Limitations Casestudy PDF:
-    I also wrote PDF for this project that explains the frequency bottlenecks & latency issues in SPIFFS. 
-    It details the performance limits of SPIFFS and how it affects this project.
+SPIFFS file system (SPI Flash File System)
 
-Libraries and header files
-    #include SPIFFS.h
-    #include FS.h
-    #include <WiFi.h>
-    #include <WiFiClientSecure>
-    #include <HTTP.h>
-NOTE: After everything is set. You can directly select you ESP32 development board for Arduino IDE and select port and Directly flash the code.
-FOOTNOTES: This project contains version-1 and version-2. 
-Version 2 is updated version of version 1 that contains larger buffer for larger payload data for HTTPS GET request.
+WiFi library
 
-Early prototype is the version on of the project that contains basic blueprint like structrue for the Final project, which is version-2. The system design and program structrue 
-is same in both, but the program implementation and structrue changes.
+WiFiClientSecure + HTTP modules
 
-Includes the below libraries/header files & their functions in the code.
-```
-  #include "FS.h"
-  #include "SPIFFS.h"
-  #include <WiFi.h>
-  #include <HTTPClient.h>
-  #include <WiFiClientSecure.h>
+Arduino IDE version 1.8.18
 
-///---WiFi FUnction used in the project---///
-    WiFi.begin(ssid, password);
-    WiFi.status() 
-    WiFi.SSID(); 
+⚠️ SPIFFS is not optimized in newer Arduino IDE versions, so 1.8.18 is preferred.
 
-///---SPIFFS Functions used in this project---///
-    SPIFFS.begin(true)
-    SPIFFS.open(filename, FILE_WRITE);
-    File.readString()
-    File.read();
-    File.close();
-    SPIFFS.remove();
-    file.write();
+🧠 Project Summary
 
-///---HTTP & HTTPS FUnctions used int this project---///
-    WiFiClientSecure client;
-    client.setInsecure();  // skip certificate check
-    HTTPClient http;
-    http.begin(client, url)) {
-    http.GET();
-    http.getStreamPtr();
-    http.end();
+Developed a firmware application for the ESP32 Dev-Kit-V1 microcontroller using the Arduino-ESP32 framework.
+The firmware downloads a file via HTTPS and writes it to SPIFFS at ~150 KB/s.
 
-```
+Core Implementations:
 
-    Video Link: ( https://drive.google.com/drive/u/1/folders/1sDHBQAxutHWzhlY8MnNhDF_fwrui1atU )
-    
+Implemented WiFi connectivity
 
+Implemented HTTPS GET using WiFiClientSecure
 
+Implemented SPIFFS Flash file system for file buffering & write operations
 
+Designed buffer logic to manage high-speed download streams
+
+📘 SPIFFS Limitations Case Study
+
+I wrote a PDF analyzing:
+
+SPIFFS latency issues
+
+Write frequency bottlenecks
+
+Impact on download speed
+
+Performance constraints for large payloads
+
+📦 Libraries & Headers Used
+#include "FS.h"
+#include "SPIFFS.h"
+#include <WiFi.h>
+#include <HTTPClient.h>
+#include <WiFiClientSecure.h>
+
+🔌 WiFi functions
+WiFi.begin(ssid, password);
+WiFi.status();
+WiFi.SSID();
+
+📁 SPIFFS functions
+SPIFFS.begin(true);
+SPIFFS.open(filename, FILE_WRITE);
+File.readString();
+File.read();
+File.write();
+File.close();
+SPIFFS.remove();
+
+🌐 HTTP / HTTPS handling
+WiFiClientSecure client;
+client.setInsecure();      // skip certificate check
+
+HTTPClient http;
+http.begin(client, url);
+http.GET();
+http.getStreamPtr();
+http.end();
+
+📹 Video Demo
+
+🔗 https://drive.google.com/drive/u/1/folders/1sDHBQAxutHWzhlY8MnNhDF_fwrui1atU
+
+📌 Project Versions
+Version-1
+
+Basic project structure
+
+Low-capacity buffer
+
+Prototype for architecture & logic flow
+
+Version-2
+
+Optimized buffers for larger HTTPS payloads
+
+More robust file handling
+
+Improved SPIFFS performance
+
+👍 Conclusion
+
+This project demonstrates:
+
+Embedded WiFi networking
+
+HTTPS data transfer
+
+Flash file systems (SPIFFS)
+
+Real-world firmware performance considerations
