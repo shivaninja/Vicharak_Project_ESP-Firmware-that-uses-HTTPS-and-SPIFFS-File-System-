@@ -1,4 +1,4 @@
-# Project For Vicharak Internship
+# Vicharak Internship Project
 Project1 — Google Home Automation with Voice-Controlled LED
 
  # Project Description
